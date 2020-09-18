@@ -1,16 +1,21 @@
 # Implementing Karastuba Multiplication
 import math
-def karatsuba(x, y):
-    if x < 10 and y < 10: # return when both x and y are single digits
+class kartsuba_algo:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def karatsuba(self):
+    if self.x < 10 and self.y < 10: # return when both x and y are single digits
         return x * y
 
-    n = max(len(str(x)) , len(str(y)))
+    n = max(len(str(self.x)) , len(str(self.y)))
     m = math.ceil(n/2) #to take care of odd n
 
-    a = x // (10 ** (m))
-    b = x % (10 ** (m))
-    c = y // (10 ** (m))
-    d = y % (10 ** (m))
+    a = self.x // (10 ** (m))
+    b = self.x % (10 ** (m))
+    c = self.y // (10 ** (m))
+    d = self.y % (10 ** (m))
 
     ac = karatsuba(a, c)
     bd = karatsuba(b, d)
