@@ -1,4 +1,4 @@
-# Implementing Merge Sort
+# Counting the number of inversions in an array
 
 class inversions(object):
 
